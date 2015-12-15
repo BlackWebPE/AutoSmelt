@@ -1,5 +1,5 @@
 <?php
-namespace AS;
+namespace AutoSmelt;
 
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\Player;
