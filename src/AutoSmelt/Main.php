@@ -39,7 +39,7 @@ $block = $ev->getBlock();
 $item = $ev->getItem()->getId();
 $ev->setInstaBreak(true);
 foreach($this->ores as $ore){
-if($block->getId() === $ore){
+if($block->getId() === $ore && !$ev->isCancelled()){
 $ev->setDrops(array());
 $p->sendMessage("§l§dAUTO-SMELTED!");
 $p->getInventory()->addItem(Item::get($this->ingot[$ore]));
