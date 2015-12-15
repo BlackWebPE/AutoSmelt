@@ -1,5 +1,5 @@
 name: AutoSmelt
 api: [1.12.0]
 version: "1.0"
-main: AS\Main
+main: AutoSmelt\Main
 author: SavionLegendZzz
