@@ -12,6 +12,7 @@ use pocketmine\level\sound\DoorSound;
 use pocketmine\level\sound\FizzSound;
 use pocketmine\level\Position;
 use pocketmine\math\Vector3;
+use pocketmine\utils\TextFormat;
 use pocketmine\item\Item;
 use pocketmine\block\Block;
 use pocketmine\plugin\PluginManager;
