@@ -1,4 +1,5 @@
 <?php
+
 namespace AutoSmelt;
 
 use pocketmine\event\block\BlockBreakEvent;
@@ -20,7 +21,7 @@ use pocketmine\Level;
 class Main extends PluginBase implements Listener{
 
 public function onEnable(){
-$this->getServer()->getLogger()->info(TextFormat::BLUE."[AutoSmelt]Plugin Enabled!");
+$this->getServer()->getLogger()->info(TextFormat::BLUE."[AutoSmelt] Plugin Enabled");
 $this->getServer()->getPluginManager()->registerEvents($this,$this);
       $this->ores=array(14,15,16,73,56);
  $this->ingot=array(
@@ -30,8 +31,6 @@ $this->getServer()->getPluginManager()->registerEvents($this,$this);
  73 => 331,
  56 => 264);
 }
-       
-      
 
 public function onBreak(BlockBreakEvent $ev){
 $p = $ev->getPlayer();
@@ -41,14 +40,10 @@ $ev->setInstaBreak(true);
 foreach($this->ores as $ore){
 if($block->getId() === $ore && !$ev->isCancelled()){
 $ev->setDrops(array());
-$p->sendMessage("§l§dAUTO-SMELTED!");
+$p->sendMessage("AutoSmelted");
 $p->getInventory()->addItem(Item::get($this->ingot[$ore]));
 $x = $p->getX();
                 $y = $p->getY();
                 $z = $p->getZ();
 $p->getLevel()->addSound(new FizzSound(new Vector3($x, $y, $z)));
-}
-}
-}
-
 }
